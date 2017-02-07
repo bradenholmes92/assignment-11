@@ -10,21 +10,22 @@
 
 
 var fizzbuzz = function(number){
+  var fizzBuzzString = '';
 
-  if (number === 1) {
-    return '.'
-  }else if (number === 2) {
-    return '..'
-  }else if (number === 3) {
-    return '..fizz'
-  }else if (number === 5) {
-    return '..fizz.buzz'
-  }else if (number === 10) {
-    return '..fizz.buzzfizz..fizzbuzz'
-  }else {
-    return '..fizz.buzzfizz..fizzbuzz.fizz..FizZBuzZ..fizz.buzz'
+for (var i = 1; i <= number; i++) {
+
+  if ((i % 5 !== 0) && (i % 3 !== 0)) {
+     fizzBuzzString = fizzBuzzString + '.'
+     //console.log(fizzString)
+  }else if ((i % 3 === 0) && (i % 5 !== 0)) {
+     fizzBuzzString = fizzBuzzString + 'fizz'
+  }else if ((i % 5 === 0) && (i % 3 !== 0)) {
+    fizzBuzzString = fizzBuzzString + 'buzz'
+  }else{
+    fizzBuzzString = fizzBuzzString + 'FizZBuzZ'
   }
-
+}
+return fizzBuzzString
 }
 
 

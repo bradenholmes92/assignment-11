@@ -6,17 +6,16 @@
 
 var maxOfArray = function(numArray){
 
-for (var i = 0; i < numArray.length ; i = i + 1){
-  var arrNmbr = numArray[i];
-  if( arrNmbr <= 21 ){
-    return 21
-  }else if ( arrNmbr === 100 ) {
-    return 100
-  }else {
-    return 201
-  }
+var maxNum = 0
+
+for (var i = 0; i < numArray.length ; i++){
+
+if (numArray[i] > maxNum) {
+  maxNum = numArray[i]
 }
 
+}
+return maxNum
 }
 
 
